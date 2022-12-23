@@ -17,6 +17,7 @@ export const Contact = () => {
           <MenuItem _hover={{backgroundColor: 'transparent'}}>{user.email}</MenuItem>
           <MenuItem onClick={()=> logout()} _hover={{backgroundColor: 'transparent'}}>Logout</MenuItem>
         </MenuList>
+        
       </Menu>
     </Box>
   );
