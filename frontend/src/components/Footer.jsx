@@ -45,7 +45,7 @@ export const Footer = ({mt}) => {
         </Box>
       </SimpleGrid>
       <Text align="center">
-        Copyright© All Reserved Rights JSSTACK DEVELOPERS 2022
+        Copyright© Saurav
       </Text>
     </Box>
   );
