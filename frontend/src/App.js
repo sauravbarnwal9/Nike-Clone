@@ -1,14 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
-import Homepage from './pages/Homepage';
+import { useEffect, useState } from "react";
+import { AllRoutes } from "./AllRoutes/AllRoutes";
+import { Home } from "./pages/home/Home";
+import { Wishlist } from "./pages/wishlist/Wishlist";
 
 function App() {
+  const [loading, setLoading] = useState(false);
+  let loader = document.getElementById('loader');
+
+  // useEffect(()=>{
+  //   setTimeout(()=>{
+  //     loader.style.display= 'none';
+  //     setLoading(false);
+  //   }, 5000)
+  // },[])
+
   return (
- <>
- <h1>hello</h1>
- <Homepage/>
- </>
+    <div> 
+      {!loading && <AllRoutes />}    
+      {/* <Wishlist/> */}
+      
+    </div>
   );
 }
 
 export default App;
+
+
+
+
+
+

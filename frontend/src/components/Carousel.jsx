@@ -25,8 +25,7 @@ export const Carousel = () => {
   const [stories, setStories] = useState([]);
 
   const getStories = () => {
-    axios.get(`${process.env.REACT_APP_BASE_URL}/stories`)
-    .then((res) => {
+    axios.get(`${process.env.REACT_APP_BASE_URL}/stories`).then((res) => {
       // console.log(res.data.msg);
       setStories(res.data.msg);
     });
@@ -38,12 +37,12 @@ export const Carousel = () => {
 
   return (
     <Box w="95%" m="auto">
-      <Swiper        
+      <Swiper
         speed={500}
-        slidesPerView={media700? 1 : media1000? 3 : 4}       
+        slidesPerView={media700 ? 1 : media1000 ? 3 : 4}
         slidesPerGroup={1}
         spaceBetween={20}
-        loop={true}        
+        loop={true}
         navigation={true}
         modules={[Pagination, Navigation]}
         className="mySwiper"

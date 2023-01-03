@@ -4,8 +4,8 @@ import { Box, SimpleGrid, Text } from "@chakra-ui/react";
 export const Footer = ({mt}) => {
   return (
     <Box
-      color="#fff"
-      bgGradient="linear(to-b, blue.400, #160597)"
+      color="#B3B3B3"
+bg={'black'}
       mt={mt? mt : ''}
       py="10"
     >

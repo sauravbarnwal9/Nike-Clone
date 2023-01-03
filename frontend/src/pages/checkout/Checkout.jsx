@@ -1,8 +1,8 @@
 import React, { useContext, useEffect, useState } from 'react';
-import styles from './checkout.module.css';
+import styles from './Checkout.module.css';
 
 import { Box, Button, Flex, FormLabel, Input, Text, Textarea, useToast } from '@chakra-ui/react';
-import { Navbar } from '../../components/navbar/Navbar';
+import { Navbar } from '../../components/Navbar';
 import { Address } from '../../components/Address';
 import { CartContextProvider } from '../../context/Cart';
 import { Footer } from '../../components/Footer';

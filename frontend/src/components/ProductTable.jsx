@@ -12,16 +12,16 @@ import {
 import { Cards } from "./Cards";
 import axios from "axios";
 import { useEffect } from "react";
-import { Skelton } from "./Skelton";
+import { Skelton } from "./Skelaton";
 
 export const ProductTable = ({hello, limit, shoesData, reCart}) => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
 
   const getData = () => {
-    axios.get(`${process.env.REACT_APP_BASE_URL}/products?_limit=${limit}`)
+    axios.get(`http://localhost:8080/product?_limit=${limit}`)
     .then((res)=>{
-      // console.log(res)
+      console.log(res)
       setData(res.data.msg);
       setLoading(false);
     })

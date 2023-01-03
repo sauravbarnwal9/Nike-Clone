@@ -1,0 +1,14 @@
+.productContainer{
+    background-image: url('../../assets/product.webp');
+    width: 100%;  
+    min-height: 100vh;
+    background-attachment: fixed;
+    /* background-repeat: no-repeat;    */
+}
+.load{
+    background-color: #000;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
