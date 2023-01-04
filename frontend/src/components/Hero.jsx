@@ -1,7 +1,7 @@
 import React from "react";
 
-import { FaFacebookSquare } from "react-icons/fa";
-import { BsMessenger } from "react-icons/bs";
+import { FaFacebookSquare, FaGithub, FaLinkedin } from "react-icons/fa";
+import { BsMailbox, BsMessenger } from "react-icons/bs";
 import {
   AiFillInstagram,
   AiOutlineTwitter,
@@ -9,13 +9,14 @@ import {
 } from "react-icons/ai";
 
 import { AspectRatio, Box, Button, Flex, Image, Text } from "@chakra-ui/react";
+import { HiMailOpen } from "react-icons/hi";
 
 const social = [
-  { logo: <FaFacebookSquare />, color: "#160597" },
-  { logo: <BsMessenger />, color: "#7960f4" },
-  { logo: <AiFillInstagram />, color: "pink" },
-  { logo: <AiOutlineTwitter />, color: "#7960f4" },
-  { logo: <AiFillYoutube />, color: "red" },
+  { logo: <FaGithub />, color: "#160597" ,link:'https://github.com/sauravbarnwal9'},
+  { logo: <HiMailOpen />, color: "red",link:'mailto:sauravbarnwal9@gmail.com?subject=Hi' },
+  { logo: <AiFillInstagram />, color: "pink" ,link:'https://www.instagram.com/100rav_barnwal/'},
+  { logo: <FaLinkedin />, color: "#7960f4" ,link:'https://www.linkedin.com/in/saurav-barnwal-60806923a/'},
+  { logo: <AiFillYoutube />, color: "red" ,link:'#'},
 ];
 
 export const Hero = () => {
@@ -105,8 +106,10 @@ export const Hero = () => {
               _hover={{ transform: "scale(1.09)", color: `${el.color}` }}
               transition=".5s"
               cursor="pointer"
+             
             >
-              {el.logo}
+            <a   href={el.link}
+            target="_blank">  {el.logo}</a>
             </Box>
           ))}
         </Flex>

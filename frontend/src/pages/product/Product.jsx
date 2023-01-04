@@ -23,7 +23,7 @@ export const Product = () => {
   const [loading, setLoading] = useState(true);
   
   const getData =()=> {
-    axios.get(`${process.env.REACT_APP_BASE_URL}/products?id=${id}`)
+    axios.get(`${process.env.REACT_APP_API}/product?id=${id}`)
     .then((res)=>{      
       setData(res.data.msg);
       setLoading(false);

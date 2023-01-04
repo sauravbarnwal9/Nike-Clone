@@ -14,38 +14,40 @@ import axios from "axios";
 import { useEffect } from "react";
 import { Skelton } from "./Skelaton";
 
-export const ProductTable = ({hello, limit, shoesData, reCart}) => {
+export const ProductTable = ({ hello, limit, shoesData, reCart }) => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
 
   const getData = () => {
-    axios.get(`http://localhost:8080/product?_limit=${limit}`)
-    .then((res)=>{
-      console.log(res)
+    axios.get(`${process.env.REACT_APP_API}/product?_limit=${limit}`).then((res) => {
       setData(res.data.msg);
       setLoading(false);
-    })
-  }
-  
-  useEffect(()=>{
+    });
+  };
+
+  useEffect(() => {
     getData();
-  },[]);
+  }, []);
 
   return (
     <SimpleGrid
-      mt='20'
-      mb='10'
+      mt="20"
+      mb="10"
       px="10"
-      columns={hello? [1, 2, 3] : [1, 2, 3, 4]}      
-      gap="7"      
+      columns={hello ? [1, 2, 3] : [1, 2, 3, 4]}
+      gap="7"
     >
-      {loading? Array(4).fill(0).map((el,i)=> <Skelton key={i} />)  
-       : shoesData !== undefined ? shoesData.map((el,i) => (
-            <Cards key={el._id} {...{el: el, hello: hello, reCart: reCart}} />        
-         ))
-       : data?.map((el,i) => (
-        <Cards key={el._id} {...{el: el, hello: hello}} />        
-       ))}
+      {loading
+        ? Array(4)
+            .fill(0)
+            .map((el, i) => <Skelton key={i} />)
+        : shoesData !== undefined
+        ? shoesData.map((el, i) => (
+            <Cards key={el._id} {...{ el: el, hello: hello, reCart: reCart }} />
+          ))
+        : data?.map((el, i) => (
+            <Cards key={el._id} {...{ el: el, hello: hello }} />
+          ))}
     </SimpleGrid>
   );
 };

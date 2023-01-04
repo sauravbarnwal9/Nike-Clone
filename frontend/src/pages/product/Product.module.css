@@ -1,9 +1,9 @@
 .productContainer{
-    background-image: url('../../assets/product.webp');
+   background-color: #404040;
     width: 100%;  
     min-height: 100vh;
     background-attachment: fixed;
-    /* background-repeat: no-repeat;    */
+    
 }
 .load{
     background-color: #000;

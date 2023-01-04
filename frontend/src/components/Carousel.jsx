@@ -25,8 +25,8 @@ export const Carousel = () => {
   const [stories, setStories] = useState([]);
 
   const getStories = () => {
-    axios.get(`${process.env.REACT_APP_BASE_URL}/stories`).then((res) => {
-      // console.log(res.data.msg);
+    axios.get(`${process.env.REACT_APP_API}/story`).then((res) => {
+     
       setStories(res.data.msg);
     });
   };
@@ -49,7 +49,7 @@ export const Carousel = () => {
       >
         {stories.map((el, i) => (
           <SwiperSlide key={i}>
-            <Box bgColor="#fcfc" borderRadius="10">
+            <Box bgColor="#121212" color={'#B3B3B3'} borderRadius="10">
               <Image borderRadius="10" src={el.img} alt="" />
               <Box p="5">
                 <Flex justify="space-evenly" fontWeight="bold">

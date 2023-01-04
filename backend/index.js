@@ -4,10 +4,11 @@ const { UserModel } = require('./models/product.model')
 const { productRouter } = require('./routes/product.route')
 const { storyRouter } = require('./routes/stories.route')
 const { UserRoute } = require('./routes/user.route')
+const cors=require('cors')
 require('dotenv').config()
 const PORT=process.env.PORT || 8080
 const app=express()
-
+app.use(cors())
 
 app.use(express.json())
 app.use("/",UserRoute)
@@ -20,7 +21,7 @@ app.get("/",(async(req,res)=>
 app.listen(PORT,async()=>{
     try {
         await connection
-        console.log("database connected")
+        console.log(`database connected on ${PORT}`)
     } catch (error) {
         console.log(error)
     }

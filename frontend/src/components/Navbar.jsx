@@ -5,23 +5,22 @@ import { AiOutlineHeart } from "react-icons/ai";
 import { IoMdContact } from "react-icons/io";
 
 import { Box, Button, Flex, Image, Center } from "@chakra-ui/react";
-// import { Cart } from "../Cart";
+
 import { useNavigate } from "react-router-dom";
-// import { CartContextProvider } from "../../context/Cart";
-// import { useAuth0 } from "@auth0/auth0-react";
-// import { Contact } from "../Contact"
+
 import axios from "axios";
 import { Cart } from "./Cart";
 import { Contact } from "./Contact";
 import { Link } from "react-router-dom";
 import { Logout } from "./Logout";
 import { Auth } from "./Auth";
+import { useSelector } from "react-redux";
 
 export const Navbar = () => {
   const navigate = useNavigate();
-  //   const { loginWithRedirect, isAuthenticated } = useAuth0();
-  //   const { cart } = useContext(CartContextProvider)
-  let token = false;
+
+  const token = useSelector((state) => state.authReducer.token);
+
   return (
     <>
       <Flex
@@ -62,6 +61,7 @@ export const Navbar = () => {
             mr={"40px"}
             fontSize={"16px"}
             cursor={"pointer"}
+            bg="#000"
           >
             {!token ? <Auth /> : <Logout />}
           </Center>

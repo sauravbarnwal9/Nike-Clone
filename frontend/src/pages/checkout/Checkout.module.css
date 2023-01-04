@@ -1,5 +1,5 @@
 .checkoutContainer{
-    background-image: url('../../assets/checkout.jpg');
+    background:#404040;
     width: 100%;  
     min-height: 100vh;
     background-attachment: fixed;

@@ -13,18 +13,8 @@ const productSchema = new mongoose.Schema({
     details: [String]
 });
 
-const storiesSchema = new mongoose.Schema({
-    title: {type:String,require},
-    text: {type:String,require},
-    img: {type:String,require},
-    url: {type:String,require},
-    like: String,
-    time: {type:String,require},
-    by: {type:String,require},
-    btn: {type:String,require},
-});
+
 
 const ProductModel = mongoose.model('shoes', productSchema);
-const StoriesModel = mongoose.model('story', storiesSchema);
 
-module.exports={ProductModel,StoriesModel}
+module.exports={ProductModel}

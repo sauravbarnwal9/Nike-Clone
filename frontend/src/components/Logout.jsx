@@ -32,24 +32,31 @@ export const Logout = () => {
         <MenuButton
           as={Button}
           size="sm"
-          bg={"transparent"}
+          bg={"#000"}
           rightIcon={<BsFillCaretDownFill />}
         >
           {user}
         </MenuButton>
-        <MenuList zIndex={2}>
-          <Flex flexDirection={"column"} gap={"5px"} fontSize={"17px"}>
+        <MenuList bg={"#000"}>
+          <Flex
+            flexDirection={"column"}
+            bg={"#000"}
+            gap={"5px"}
+            fontSize={"17px"}
+          >
             <MenuItem
+              bg={"#000"}
               onClick={() => {
-                navigate("/favourite");
+                navigate("/wishlist");
               }}
               icon={<FaRegHeart />}
             >
               Wishlist
             </MenuItem>
             <MenuItem
+              bg={"#000"}
               onClick={() => {
-                navigate("/orders");
+                navigate("/checkout");
               }}
               icon={<RiLuggageCartLine />}
             >
@@ -57,6 +64,7 @@ export const Logout = () => {
             </MenuItem>
 
             <MenuItem
+              bg={"#000"}
               onClick={() => {
                 navigate("/cart");
               }}
@@ -65,7 +73,7 @@ export const Logout = () => {
               Cart
             </MenuItem>
             <Divider />
-            <MenuItem onClick={handleLogoutBtn} icon={<FiLogOut />}>
+            <MenuItem bg={"#000"} onClick={handleLogoutBtn} icon={<FiLogOut />}>
               Logout
             </MenuItem>
           </Flex>

@@ -1,0 +1,29 @@
+
+.typeWritertheme {
+	border-right: 3px solid white;
+	width: 0ch;
+	white-space: nowrap;
+	overflow: hidden;
+	animation: typewriter 10s infinite alternate;
+    color: white;
+}
+
+@keyframes typewriter {
+	0% {
+		width: 0ch;
+	}
+
+	50% {
+		width: 28ch; 
+	}
+}
+p{
+    cursor: pointer;
+}
+p:hover{
+    color:  #FFFFFF;
+    border-bottom: 0.1px #FFFFFF solid ;
+}
+
+
+

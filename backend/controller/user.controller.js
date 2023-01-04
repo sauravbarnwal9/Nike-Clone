@@ -29,10 +29,7 @@ exports.signup = (req, res) => {
     } catch (error) {
       res
       .status(404)
-      .json({
-        status: "something is missing",
-      })
-      .send({ msg: "something is missing" }); 
+      .send({ message: "something is missing" }); 
     }
     }
 
@@ -53,20 +50,18 @@ exports.login = async (req, res) => {
     
       if (result) {
         const token = jwt.sign({ email: email }, SECRET_CODE);
-        res.status(200).send({ "login": "successfully", "token": token });
+        res.status(200).send({ "login": "successfully", "token": token,'user':{'firstName':user.firstName} });
       } 
       else{
-        res.status(304).send("Password is Invalid")
+        res.status(304).send({message:"Password is Invalid"})
       }
      
       });
     } catch (error) {
       res
       .status(404)
-      .json({
-        status: "something is missing",
-      })
-      .send({ msg: "something is missing" });
+      
+      .send({ message: "something is missing" });
     }
     
     

@@ -90,7 +90,7 @@ export const Cart = () => {
                 <Flex h="90vh" justify="center" align="center">
                   <Image
                     w="50%"
-                    src="https://i.postimg.cc/xCFdk5dq/emptybag.png"
+                    src="https://www.99fashionbrands.com/wp-content/uploads/2020/12/empty_cart.png"
                     alt="cart"
                   />
                 </Flex>
