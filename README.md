@@ -48,7 +48,7 @@
   <a href="https://github.com/sauravbarnwal9/Nike-Clone/issues">Report Bug</a> &#10023;
   <a href="#Getting-Started">Getting Started</a> &#10023; 
   <a href="#Install">Installing</a> &#10023;
-  <a href="#Contact">Author</a> &#10023;
+  
 </p>
 
 
